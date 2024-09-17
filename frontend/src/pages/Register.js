@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Register.css';
+import axios from 'axios';
 
 const Register = () => {
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
@@ -8,10 +9,17 @@ const Register = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit =async (e) => {
     e.preventDefault();
-    alert('Registered successfully!');
-    // Add registration logic here
+
+    try{
+      const response = await axios.post('http://localhost:8000/api/users/register', formData);
+      alert(response.data.message);
+    }
+    catch(error) {
+      console.error("Error: ", error);
+      alert(error.response?.data?.message || "An error Occurred");
+    }
   };
 
   return (
