@@ -1,0 +1,26 @@
+.search-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .filter {
+    margin-right: 15px;
+  }
+  
+  .filter input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .search-button {
+    background-color: #FF7F00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  

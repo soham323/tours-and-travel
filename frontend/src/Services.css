@@ -1,0 +1,17 @@
+/* src/components/Services.css */
+.services {
+    margin-top: 40px;
+  }
+  
+  .services-list {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .service-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+  }
+  

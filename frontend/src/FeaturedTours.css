@@ -1,0 +1,39 @@
+.featured-tours {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #f8f9fa;
+  }
+  
+  .featured-tours h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .tour-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensure space is distributed evenly */
+  }
+  
+  .tour-card {
+    flex: 1 1 23%; /* Adjust to fit 4 cards in a row considering margins */
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Space between rows */
+  }
+  
+  /* Adjust the card styling if needed */
+  .tour-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .tour-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .tour-card p {
+    color: #555;
+  }
+  

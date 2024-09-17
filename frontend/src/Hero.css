@@ -1,0 +1,38 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #F9F9F9;
+  }
+  
+  .hero-text {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-text h2 span {
+    color: #FF7F00; /* Orange for the word "memories" */
+  }
+  
+  .hero-text p {
+    margin-top: 10px;
+    color: #777;
+  }
+  
+  .hero-images {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .hero-images img {
+    width: 150px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  

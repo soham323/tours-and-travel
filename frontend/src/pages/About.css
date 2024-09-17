@@ -1,0 +1,96 @@
+.about-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .about-header h1 {
+    font-size: 2.5rem;
+    color: #ff6200;
+  }
+  
+  .about-header p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .mission, .team, .testimonials, .contact-info {
+    margin-bottom: 40px;
+  }
+  
+  .mission h2, .team h2, .testimonials h2, .contact-info h2 {
+    font-size: 2rem;
+    color: #ff6200;
+    margin-bottom: 20px;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .team-member {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+  }
+  
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .team-member h3 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .team-member p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .testimonial {
+    background-color: #f9f9f9;
+    border-left: 4px solid #ff6200;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial blockquote {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .testimonial p {
+    font-size: 1rem;
+    color: #666;
+    text-align: right;
+  }
+  
+  .contact-info a {
+    color: #ff6200;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  .about-page hr {
+    border: 0;
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px 0;
+  }
+  
+  
