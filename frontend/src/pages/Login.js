@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css';
+import axios from 'axios';
 
 const Login = () => {
   const [credentials, setCredentials] = useState({ email: '', password: '' });
@@ -8,10 +9,17 @@ const Login = () => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Logged in!');
-    // Add login logic here
+    
+    try{
+      const response = await axios.post('http://localhost:8000/api/users/login', credentials)
+      alert(response.data.message); 
+    }
+    catch(error) {
+      console.error("Error: ",error);
+      alert(error.response?.data?.message || "An Error Occurred!");
+    }
   };
 
   return (
