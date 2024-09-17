@@ -30,6 +30,9 @@ const uploadTourSchema = new mongoose.Schema(
       type: String,
       require: true,
     },
+    tourImage: {
+      type: String,
+    }
   },
   {
     timestamps: true,
