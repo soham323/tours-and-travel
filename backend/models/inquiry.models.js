@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const inquirySchema = new mongoose.Schema(
   {
-    userName: {
+    name: {
       type: String,
       require: true,
     },
@@ -11,7 +11,7 @@ const inquirySchema = new mongoose.Schema(
       require: true,
       lowercase: true,
     },
-    comment: {
+    message: {
       type: String,
       require: true,
     },

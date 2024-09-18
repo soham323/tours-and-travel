@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import axios from 'axios';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -8,10 +9,16 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Message sent!');
-    // Add form submission logic here
+    try{
+      const response = await axios.post('http://localhost:8000/api/users/contact', formData);
+      alert(response.data.message);
+    }
+    catch(error) {
+      console.log("Error: ",error);
+      alert(error.response?.data?.message || "An error Occurred!");
+    }
   };
 
   return (
