@@ -1,39 +1,34 @@
+/* FeaturedTours.css */
+
 .featured-tours {
-    padding: 40px 0;
-    text-align: center;
-    background-color: #f8f9fa;
-  }
-  
-  .featured-tours h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  text-align: center;
+}
+
+.featured-tours h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.tour-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Space between tour cards */
+  max-width: 1200px;
+  margin: 0 auto; /* Center the tour list */
+}
+
+@media (max-width: 768px) {
   .tour-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Ensure space is distributed evenly */
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .tour-card {
-    flex: 1 1 23%; /* Adjust to fit 4 cards in a row considering margins */
-    box-sizing: border-box;
-    margin-bottom: 20px; /* Space between rows */
+    width: 90%; /* Full width on smaller screens */
   }
-  
-  /* Adjust the card styling if needed */
-  .tour-card img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .tour-card h3 {
-    margin: 10px 0;
-    font-size: 18px;
-  }
-  
-  .tour-card p {
-    color: #555;
-  }
-  
+}

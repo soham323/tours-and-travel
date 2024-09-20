@@ -2,14 +2,19 @@
 import React from 'react';
 import './TourCard.css';
 
-const TourCard = ({ image, title, location, rating }) => {
+const TourCard = ({ image, name, description, countries, cities, days, nights, price }) => {
   return (
     <div className="tour-card">
-      <img src={image} alt={title} />
+      <img src={image} alt={name} className='tour-card-image' />
       <div className="tour-info">
-        <h3>{location}</h3>
-        <p>{title}</p>
-        <span className="rating">{rating}</span>
+        <h3>{name}</h3>
+        <p className='tour-description'>{description}</p>
+        <div className="tour-info">
+          <p><strong>Countries: {countries}</strong></p>
+          <p><strong>Cities: {cities}</strong></p> 
+          <p><strong>Duration: {days} Days & {nights} Nights.</strong></p> 
+          <p><strong>Price: ₹{price}</strong></p> 
+        </div>
       </div>
     </div>
   );
