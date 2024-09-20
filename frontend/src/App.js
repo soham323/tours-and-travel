@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import './App.css'; // Main stylesheet for global styles
+import UploadTour from './components/uploadTour';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             <Route path="/register" element={<Register />} />
           </Routes>
         </main>
+        <UploadTour/>
         <Footer />
       </div>
     </Router>

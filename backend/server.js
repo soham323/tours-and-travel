@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import { app } from "./app.js";
 import bcrypt from "bcryptjs";
 import userRegistration from "./routes/user.routes.js";
+import uploadTour from "./routes/tour.routes.js";
 dotenv.config(
     {
         path: './env',
@@ -13,6 +14,7 @@ dotenv.config(
 
 // calling database connection
 app.use('/api/users', userRegistration)
+app.use('/api/tours', uploadTour)
 
 connectDB()
 

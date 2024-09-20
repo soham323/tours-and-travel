@@ -23,11 +23,11 @@ const uploadTourSchema = new mongoose.Schema(
       require: true,
     },
     countries: {
-      type: String,
+      type: [String],
       require: true,
     },
     cities: {
-      type: String,
+      type: [String],
       require: true,
     },
     tourImage: {
