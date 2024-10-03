@@ -15,12 +15,12 @@ import UploadTour from './components/uploadTour';
 
 function App() {
   return (
-    <Router> {/* Wrap the entire application with Router */}
+    <Router>
       <div className="App">
         <Header />
         <main>
+          {/* Routes */}
           <Routes>
-            {/* Define routes for the different pages */}
             <Route path="/" element={
               <>
                 <Hero />
