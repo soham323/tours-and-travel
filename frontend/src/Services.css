@@ -15,3 +15,15 @@
     width: 30%;
   }
   
+  .services-list .weather-details {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #d1bebe;
+    border-radius: 5px;
+  }
+  
+  .services-list .error {
+    color: red;
+    font-size: 14px;
+  }
+  
