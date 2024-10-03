@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import './Register.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
 
+  // navigate state
+  const navigate = useNavigate();
+
+  const [credentials, setCredentials] = useState({name: '', email: '', password: ''});
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -15,6 +20,12 @@ const Register = () => {
     try{
       const response = await axios.post('http://localhost:8000/api/users/register', formData);
       alert(response.data.message);
+
+      //Clear the credentials after successful registration.
+      setCredentials({name: '', email: '', password: ''});
+
+      //Navigate to home page after successful registration.
+      navigate("/");
     }
     catch(error) {
       console.error("Error: ", error);

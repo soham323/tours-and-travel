@@ -33,11 +33,11 @@ function App() {
             <Route path="/tour" element={<FeaturedTours />} />
 
             <Route path="/contact" element={<Contact />} />
+            <Route path="/uploadTour" element={<UploadTour/>} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Routes>
-        </main>
-        <UploadTour/>
+        </main> 
         <Footer />
       </div>
     </Router>

@@ -33,7 +33,7 @@ const UploadTour = () => {
     }
 
     return (
-        <div className="upload-tour">
+        <div className="upload-tour" style={{ marginTop: '55px' }} >
             <h1>Upload New Tour </h1>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="name" placeholder="Tour Name" id="name" value={tourData.name} onChange={handleChange} required/>
@@ -44,6 +44,9 @@ const UploadTour = () => {
                 <input type="text" name="countries" placeholder="Countries of Tour (Separate by comma ,)" id="countries" value={tourData.countries} onChange={handleChange} required/>
                 <input type="text" name="cities" placeholder="Cities of Tour (Separate by comma ,)" id="countries" value={tourData.cities} onChange={handleChange} required/>
                 <input type="text" name="tourImage" placeholder="Tour Image URL" value={tourData.tourImage} id="tourImage" onChange={handleChange} required/>
+                <br />
+                <br />
+                <br />
                 <button className="btn btn-primary">Upload Tour</button>
             </form>
         </div>

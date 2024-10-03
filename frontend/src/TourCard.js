@@ -10,7 +10,7 @@ const TourCard = ({ image, name, description, countries, cities, days, nights, p
         <h3>{name}</h3>
         <p className='tour-description'>{description}</p>
         <div className="tour-info">
-          <p><strong>Countries: {countries}</strong></p>
+          <p><strong>Countries: {countries.join(', ')}</strong></p>
           <p><strong>Cities: {cities}</strong></p> 
           <p><strong>Duration: {days} Days & {nights} Nights.</strong></p> 
           <p><strong>Price: ₹{price}</strong></p> 
