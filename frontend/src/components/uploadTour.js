@@ -1,7 +1,20 @@
 import React from "react";
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+
 const UploadTour = () => {
+    const [credentials, setCredentials] = useState({ name: '',
+        description: '',
+        price: '',
+        days: '',
+        nights: '',
+        countries: '',
+        cities: '',
+        tourImage: ''});
+
+    const navigate = useNavigate();
+
     const [tourData, setTourData] = useState({
         name: '',
         description: '',
@@ -25,6 +38,16 @@ const UploadTour = () => {
         try {
             const response = await axios.post('http://localhost:8000/api/tours/uploadTour', formattedData)
             alert(response.data.message);
+            setCredentials({ name: '',
+                description: '',
+                price: '',
+                days: '',
+                nights: '',
+                countries: '',
+                cities: '',
+                tourImage: ''
+            });
+            navigate("/tour");
         }
         catch (error) {
             console.error('Error uploading Tour', error );
